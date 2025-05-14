@@ -320,5 +320,9 @@ body {
       height: 200px;
       transform: translateY(10px);
   }
+
+  50%{
+      transform: translateY(-190px);
+  }
 }
 }
