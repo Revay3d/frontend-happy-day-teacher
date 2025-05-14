@@ -264,6 +264,18 @@ body {
       transform: translateY(10px);
     }
   }
+
+  @keyframes close {
+  0% {
+    padding: 20px;
+    top: -120px;
+    z-index: 20;
+    left: -70px;
+     width: 300px;
+      height: 200px;
+    transform: translateY(10px);
+  }
+}
 }
 
 @media (max-width: 400px) {
@@ -297,4 +309,16 @@ body {
       transform: translateY(10px);
     }
   }
+
+   @keyframes close {
+  0% {
+    padding: 20px;
+    top: -120px;
+    z-index: 20;
+    left: -70px;
+     width: 210px;
+      height: 200px;
+    transform: translateY(10px);
+  }
+}
 }

@@ -5,12 +5,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [token, setToken] = useState(localStorage.getItem('Authorization'));
-  useEffect(() => {
-    const storedToken = localStorage.getItem('Authorization');
-    setToken(storedToken);
-  }, []);
-  
+  const [token, setToken] = useState("Validando...");
   useEffect(() => {
     const res = localStorage.getItem('Authorization');
     const genero = localStorage.getItem('Genero');
