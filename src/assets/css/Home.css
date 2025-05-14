@@ -1,0 +1,175 @@
+/* Temas por género */
+body.woman {
+  --colorprimario: #ccbbeb;
+  --colorprimario_oscuro: #8f6cd1;
+  --colorprimario_mas_oscuro: #6b50b1;
+}
+
+body.men {
+  --colorprimario: #bbceeb;
+  --colorprimario_oscuro: #6ca9d1;
+  --colorprimario_mas_oscuro: #41759c;
+}
+
+/* Color base neutro (azul-morado suave) */
+body {
+  --colorprimario: #c4d1f0;
+  --colorprimario_oscuro: #a28cd6;
+  --colorprimario_mas_oscuro: #6a60b6;
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: rgb(53, 47, 53);
+}
+
+/* Mensaje */
+.msg {
+  z-index: 99;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(110, 110, 110);
+  line-height: 1px;
+  background-color: rgb(255, 253, 255);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  padding-top: 50px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.msg_icon {
+  cursor: pointer;
+  position: absolute;
+  top: -16px;
+  font-size: 4rem;
+  animation: latidoColor 1.2s infinite alternate;
+  transition: all 0.5s ease-in-out;
+  color: var(--colorprimario);
+  will-change: transform;
+}
+
+@keyframes latidoColor {
+  0% {
+    transform: scale(1);
+    color: var(--colorprimario);
+  }
+  100% {
+    transform: scale(1.2);
+    color: var(--colorprimario_mas_oscuro);
+  }
+}
+
+.sub_msg {
+  margin-top: 0;
+  line-height: 0px;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+/* Formulario */
+.form {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  top: -60px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.form.active {
+  top: 0;
+}
+
+.form input {
+  background-color: #ffffff;
+  color: rgb(53, 47, 53);
+  border: var(--colorprimario) 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.form input:focus {
+  outline: none;
+  border: 2px solid var(--colorprimario_oscuro);
+}
+
+/* Estilo si la key es incorrecta */
+.form input.error {
+
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); border-color: var(--colorprimario); }
+  25% { transform: translateX(-5px);   border-color: red;}
+  50% { transform: translateX(5px);  border-color: red; }
+  75% { transform: translateX(-5px);   border-color: red; }
+}
+
+.form button {
+  background-color: var(--colorprimario);
+  transition: all 0.3s ease-in-out;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form button:hover {
+  background-color: var(--colorprimario_oscuro);
+  cursor: pointer;
+}
+
+.form button:focus {
+  outline: none;
+}
+
+/* Opción seleccionada */
+.option {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.option.selected {
+  border-color: var(--colorprimario_oscuro);
+}
+
+.msg_heart {
+  background-color: var(--colorprimario);
+}
+
+/* Responsivo */
+@media (max-width: 400px) {
+  .msg {
+    line-height: 20px;
+  }
+
+  .sub_msg {
+    margin-top: 0;
+    line-height: 1px;
+  }
+}
