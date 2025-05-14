@@ -6,7 +6,11 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('Authorization'));
-
+  useEffect(() => {
+    const storedToken = localStorage.getItem('Authorization');
+    setToken(storedToken);
+  }, []);
+  
   useEffect(() => {
     const res = localStorage.getItem('Authorization');
     const genero = localStorage.getItem('Genero');
