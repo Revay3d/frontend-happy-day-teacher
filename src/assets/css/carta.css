@@ -322,7 +322,7 @@ body {
   }
 
   50%{
-      transform: translateY(-190px);
+      transform: translateY(-175px);
   }
 }
 }
