@@ -7,7 +7,7 @@ import "../assets/css/Home.css";
 const msg =<>¡Feliz día de los <span className="resaltado-nombre">Maestros</span>!</>;
 const sub_msg = "Preciona el corazon";
 
-function Home() {
+function Home({setToken}) {
   const navigate = useNavigate();
   const [key, setKey] = useState("");
   const [heart, setHeart] = useState(false);
@@ -32,6 +32,8 @@ function Home() {
       const res = await login(key);
       localStorage.setItem("Authorization", `Bearer ${res.data.token}`);
       localStorage.setItem("Genero", res.data.genero); 
+      const token = `Bearer ${res.data.token}`;
+      setToken(token);
       navigate("/carta");
 
 

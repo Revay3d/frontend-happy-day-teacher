@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home setToken={setToken} />} />
       <Route path="/carta" element={token ? <Cartas /> : <Navigate to="/" />} />
       <Route path="*" element={<Error />} />
     </Routes>
