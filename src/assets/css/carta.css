@@ -267,13 +267,13 @@ body {
 
   @keyframes close {
   0% {
-    padding: 20px;
-    top: -120px;
-    z-index: 20;
-    left: -70px;
-     width: 300px;
+  padding: 20px;
+      top: -120px;
+      z-index: 20;
+      left: -45px;
+      width: 300px;
       height: 200px;
-    transform: translateY(10px);
+      transform: translateY(10px);
   }
 }
 }
@@ -312,13 +312,13 @@ body {
 
    @keyframes close {
   0% {
-    padding: 20px;
-    top: -120px;
-    z-index: 20;
-    left: -70px;
-     width: 210px;
+    padding: 5px;
+      top: -120px;
+      z-index: 20;
+      left: -4px;
+      width: 210px;
       height: 200px;
-    transform: translateY(10px);
+      transform: translateY(10px);
   }
 }
 }
